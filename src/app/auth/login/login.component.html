@@ -1,0 +1,47 @@
+<!-- <p>login works!</p> -->
+
+<div class="page">
+    <div class="container">
+        <div class="left">
+            <div class="login">Login</div>
+            <div class="eula">Luis Alejandro Mendez</div>
+        </div>
+        <div class="right">
+            <div class="form">
+                <div class="wave-group">
+                    <input required="" type="text" class="input" autocomplete="name" [(ngModel)]="email">
+                    <span class="bar"></span>
+                    <label class="label">
+                        <span class="label-char" style="--index: 0">E</span>
+                        <span class="label-char" style="--index: 1">-</span>
+                        <span class="label-char" style="--index: 2">m</span>
+                        <span class="label-char" style="--index: 3">a</span>
+                        <span class="label-char" style="--index: 4">i</span>
+                        <span class="label-char" style="--index: 5">l</span>
+                    </label>
+                </div>
+                <div class="wave-group">
+                    <input required="" type="password" class="input" [(ngModel)]="password">
+                    <span class="bar"></span>
+                    <label class="label">
+                        <span class="label-char" style="--index: 0">P</span>
+                        <span class="label-char" style="--index: 1">a</span>
+                        <span class="label-char" style="--index: 2">s</span>
+                        <span class="label-char" style="--index: 3">s</span>
+                        <span class="label-char" style="--index: 4">w</span>
+                        <span class="label-char" style="--index: 5">o</span>
+                        <span class="label-char" style="--index: 6">r</span>
+                        <span class="label-char" style="--index: 7">d</span>
+                    </label>
+                </div>
+                <button (click)="login()">
+                    <span>Entrar</span>
+                </button>
+
+                <div class="mensaje-error" [hidden]="!banderaError">
+                    <p>Credenciales incorrectas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="nav">
+    <div class="logo">
+        <p><a [routerLink]="['home']">E-Commerce</a> </p>
+    </div>
+
+    <div class="right-links">
+        <a [routerLink]="['mostrarUsuarios']">Usuarios</a>
+        <a [routerLink]="['mostrarPublicaciones']">Publicaciones</a>
+        <a [routerLink]="['mostrarReportes']">Reportes</a>
+        <a [routerLink]="['nuevoAdmin']">Nuevo Admin</a>
+        <a> <button (click)="logout()" class="btn">Cerrar Sesion</button> </a>
+    </div>
+</div>
