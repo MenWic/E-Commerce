@@ -14,6 +14,7 @@ export class UsuarioService {
 
   //Peticiones
   public login(usuario: any): Observable<any> {
+    console.log(usuario);
     return this.http.post(`${this.url}/login`, usuario);
   }
 

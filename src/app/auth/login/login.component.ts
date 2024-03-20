@@ -33,7 +33,7 @@ export class LoginComponent {
     });
     //Servicio de loggeo, que reaiza el Servicio mediante peticiones a la API
     this.usuariosService.login(usuario).subscribe((respuesta: any) => {
-      console.log(respuesta);
+      console.log(respuesta); //imprimir el objeto usuario
       if (respuesta === null) {
         this.banderaError = true;
         return;
@@ -42,8 +42,8 @@ export class LoginComponent {
         this.banderaError = true;
         return;
       }
-      this.cookieService.set("usuario", respuesta.usuarioEncontrado.email);
-      this.cookieService.set("rol", respuesta.usuarioEncontrado.rol);
+      this.cookieService.set("usuario", respuesta.email);
+      this.cookieService.set("rol", respuesta.rol);
 
       this.redirect(respuesta); 
     });

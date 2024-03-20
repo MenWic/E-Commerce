@@ -1,1 +1,23 @@
-<p>nuevo-admin works!</p>
+<div class="container">
+    <div class="box form-box">
+        <header>Nuevo Administrador</header>
+
+        <form action="" method="post">
+            <div class="field input">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" autocomplete="off" required [(ngModel)]="username">
+            </div>
+            <div class="field input">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" autocomplete="off" required [(ngModel)]="email">
+            </div>
+            <div class="field input">
+                <label for="password">Password</label>
+                <input type="password" name="Password" id="password" autocomplete="off" required [(ngModel)]="password">
+            </div>
+            <div class="field">
+                <input (click)="crearAdmin()" type="submit" class="btn" name="submit" value="Crear">
+            </div>
+        </form>
+    </div>
+</div>

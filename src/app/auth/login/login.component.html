@@ -1,13 +1,14 @@
-<!-- <p>login works!</p> -->
-
 <div class="page">
     <div class="container">
         <div class="left">
-            <div class="login">Login</div>
-            <div class="eula">Luis Alejandro Mendez</div>
+            <div class="title">E-Commerce</div>
+            <div class="eula">Comercio electrónico</div>
         </div>
         <div class="right">
             <div class="form">
+                <div class="">
+                    <div class="login">Inicia Sesión</div>
+                </div>
                 <div class="wave-group">
                     <input required="" type="text" class="input" autocomplete="name" [(ngModel)]="email">
                     <span class="bar"></span>
@@ -37,6 +38,9 @@
                 <button (click)="login()">
                     <span>Entrar</span>
                 </button>
+                <div class="link-div">
+                    <a class="link" [routerLink]="['crearUsuario']">Registrarse</a>            
+                </div>
 
                 <div class="mensaje-error" [hidden]="!banderaError">
                     <p>Credenciales incorrectas</p>

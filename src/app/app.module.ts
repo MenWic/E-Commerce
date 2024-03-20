@@ -18,6 +18,8 @@ import { MostrarPublicacionesComponent } from './admin/mostrar-publicaciones/mos
 import { MostrarReportesComponent } from './admin/mostrar-reportes/mostrar-reportes.component';
 import { NuevoAdminComponent } from './admin/nuevo-admin/nuevo-admin.component';
 
+// User components (pend)
+
 @NgModule({
   declarations: [
     AppComponent,
