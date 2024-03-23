@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 
 @Injectable({
@@ -13,19 +13,39 @@ export class UsuarioService {
   constructor(private http: HttpClient) { }
 
   //Peticiones
+  //Login
   public login(usuario: any): Observable<any> {
     console.log(usuario);
     return this.http.post(`${this.url}/login`, usuario);
   }
 
-  public mostrarUsuarios(usuario: any): Observable<any> {
-    return this.http.post(`${this.url}/mostrarUsuarios`, usuario);
-  }
-
+  //Signup (Usuarios) y CrearAdmin (Admin)
   public crearUsuario(usuario: any): Observable<any> {
     return this.http.post(`${this.url}/crearUsuario`, usuario);
   }
 
+  //Usuarios aprobados (Admin)
+  public obtenerUsuariosAprobados(): Observable<any> {
+    return this.http.get(`${this.url}/usuariosAprobados`)
+    .pipe(map((response: any) => response.usuariosAprobados));
+  }
+
+  public eliminarUsuario(id: number): Observable<any> {
+    return this.http.post(`${this.url}/eliminarUsuario`, {id} );
+  }
+
+  //Usuarios por aprobar (Admin)
+  public obtenerUsuariosDesaprobados(/*usuario: any*/): Observable<any> {
+    return this.http.get(`${this.url}/usuariosDesaprobados`)
+    .pipe(map((response: any) => response.usuariosDesaprobados));
+  }
+
+  //AQUI ESTA EL ERROR EN LA 35
+  public aprobarUsuario(id: number): Observable<any> {
+    return this.http.post(`${this.url}/aprobarUsuario`, {id} );
+  }
+
+  //**************************************** */
   public editarUsuario(usuario: any): Observable<any> {
     return this.http.post(`${this.url}/editarUsuario`, usuario);
   }

@@ -17,6 +17,10 @@ import { MostrarUsuariosComponent } from './admin/mostrar-usuarios/mostrar-usuar
 import { MostrarPublicacionesComponent } from './admin/mostrar-publicaciones/mostrar-publicaciones.component';
 import { MostrarReportesComponent } from './admin/mostrar-reportes/mostrar-reportes.component';
 import { NuevoAdminComponent } from './admin/nuevo-admin/nuevo-admin.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { UserViewComponent } from './user/user-view/user-view.component';
+import { UserNavbarComponent } from './user/user-navbar/user-navbar.component';
+import { UserHomeComponent } from './user/user-home/user-home.component';
 
 // User components (pend)
 
@@ -24,6 +28,7 @@ import { NuevoAdminComponent } from './admin/nuevo-admin/nuevo-admin.component';
   declarations: [
     AppComponent,
     LoginComponent,
+    SignupComponent,
 
     AdminViewComponent,
     AdminHomeComponent,
@@ -33,7 +38,9 @@ import { NuevoAdminComponent } from './admin/nuevo-admin/nuevo-admin.component';
     MostrarReportesComponent,
     NuevoAdminComponent,
 
-    /*  */
+    UserViewComponent,
+    UserNavbarComponent,
+    UserHomeComponent,
   ],
   imports: [
     BrowserModule,

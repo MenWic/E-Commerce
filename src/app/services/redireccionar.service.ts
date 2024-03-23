@@ -15,10 +15,12 @@ export class RedireccionarService {
     switch (rol) {
       case 'Administrador':
         this.router.navigate([`/adminMenu/${ruta}`]);
+        console.log("Redireccion exitosa! El usuario actual es Admin");
         break;
       case 'Usuario':
         //console.log('entro');
         this.router.navigate([`/userMenu/${ruta}`]);
+        console.log("Redireccion exitosa! El usuario actual es User");
         break;
     }
   }

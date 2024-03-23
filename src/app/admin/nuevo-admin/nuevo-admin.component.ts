@@ -13,11 +13,12 @@ export class NuevoAdminComponent {
   public rol: string = 'Administrador';
   public email: string = '';
   public password: string = '';
+  public aprobado: boolean = true; //El usuario 'Adminisitrador' es aprobado automaticamente
 
   //Constructor
   constructor(
     private usuarioService: UsuarioService,
-    private navegarService: RedireccionarService
+    private redireccionarService: RedireccionarService
   ) {}
 
   //Funcion
@@ -27,6 +28,7 @@ export class NuevoAdminComponent {
       rol: this.rol,
       email: this.email,
       password: this.password,
+      aprobado: this.aprobado, 
     });
 
     this.usuarioService.crearUsuario(employee).subscribe((respuesta: any) => {
@@ -35,8 +37,10 @@ export class NuevoAdminComponent {
         alert('No se creo el Admin');
         return;
       }
+      
       alert('Se creo el Admin');
-      this.navegarService.redireccionar('home/raiz');
+      //this.router.navigate(['/adminMenu/home']);
+      this.redireccionarService.redireccionar('home');
     });
   }
 }

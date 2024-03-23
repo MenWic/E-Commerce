@@ -14,47 +14,36 @@ export class AdminHomeComponent implements OnInit {
   
   //Constructor
   constructor(
-    private ruta: ActivatedRoute,
-    private router: Router,
     private usuarioService: UsuarioService,
-    private cookiesService: CookieService
+    //private cookiesService: CookieService
   ) {}
 
   ngOnInit(): void {
     //this.idAdmin = this.ruta.snapshot.params['idAdmin'];
-    //this.mostrarUsuarios();
+    this.mostrarUsuariosAprobados();
+  }
+
+  //Servicio para obtener usuarios desaprobados
+  mostrarUsuariosAprobados(): void {
+    this.usuarioService.obtenerUsuariosAprobados().subscribe((response) => {
+      this.usuarios = response; // Asigna la propiedad usuariosDesaprobados a usuarios
+
+      //console.log(response);
+      console.log(this.usuarios);
+    });
+  }
+
+  //Metodo que aprueba usuarios
+  eliminarUsuario(id: any): void {
+    this.usuarioService.eliminarUsuario(id).subscribe(() => {
+      console.log('Usuario (ID) enviado a Node: ', id);
+
+      // Actualizar la lista de usuarios desaprobados después de aceptar uno
+      this.mostrarUsuariosAprobados();
+    });
   }
 
   /**
    * Listar los nuevos registros de Usuarios
    */
-  /* public mostrarUsuarios(){
-    let admin = this.cookiesService.get('usuario');
-    this.usuarioService.mostrarUsuarios(this.idAdmin).subscribe((usuarios: any) => {
-        console.log(usuarios);
-        this.usuarios = usuarios;
-    });
-  }
-
-  public toUsuarios(){
-    this.router.navigate([`/adminMenu/usuarios`]);
-  }
-
-  public toPublicaciones(){
-    this.router.navigate([`/adminMenu/publicaciones`]);
-  }
-
-  public toReportes() {
-    this.router.navigate([`/adminMenu/reportes`]);
-
-  }
-
-  public toCrearAdmin() {
-    this.router.navigate([`/adminMenu/crearAdmin`]); //enviamos al formulario de creacion de usuario
-  }
-  
-  /*
-   * public editarPerfil() {}
-  */
-
 }

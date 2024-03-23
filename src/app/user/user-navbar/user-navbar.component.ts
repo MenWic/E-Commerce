@@ -3,18 +3,18 @@ import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
-  selector: 'app-admin-navbar',
-  templateUrl: './admin-navbar.component.html',
-  styleUrls: ['./admin-navbar.component.css']
+  selector: 'app-user-navbar',
+  templateUrl: './user-navbar.component.html',
+  styleUrls: ['./user-navbar.component.css']
 })
-export class AdminNavbarComponent {
+export class UserNavbarComponent {
   //Constructor
   constructor(
     private router: Router, 
     private cookieService: CookieService
     ) {}
 
-  //metodo
+    //metodo
   public logout() {
     this.cookieService.delete('usuario');
     this.cookieService.delete('rol');

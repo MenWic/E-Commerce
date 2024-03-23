@@ -1,1 +1,30 @@
-<p>mostrar-usuarios works!</p>
+<div class="container">
+  <div class="box form-box">
+    <header>Solicitud de Usuarios</header>
+
+    <form action="">
+
+      <table class="cells">
+        <thead>
+          <tr>
+            <th>ID </th>
+            <th> Username</th>
+            <th> Correo electrónico</th>
+            <th> Rol</th>
+            <th> Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of usuarios">
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.username }}</td>
+            <td>{{ usuario.rol }}</td>
+            <td>{{ usuario.email }}</td>
+            <td><button (click)="aceptarUsuario(usuario.id)">Aprobar</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </form>
+  </div>
+</div>
