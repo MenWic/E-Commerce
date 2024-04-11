@@ -175,13 +175,13 @@ body {
 
 .btn {
   height: 35px;
-  background: rgba(76, 68, 182, 0.808);
+  background: lightcoral;
   border-radius: 16px;
   color: #fff;
   font-size: 15px;
   cursor: pointer;
   transition: all 0.3s;
-  padding: 2% 10px 8% 10px;
+  padding: 2% 5% 3% 5%;
 }
 
 .btn:hover {

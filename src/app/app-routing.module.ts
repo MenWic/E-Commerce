@@ -38,11 +38,11 @@ const routes: Routes = [
     path: 'adminMenu',
     component: AdminViewComponent,
     children: [
-      { path: 'home', component: AdminHomeComponent }, //Archivos y Carpetas en raiz
-      { path: 'mostrarUsuarios', component: MostrarUsuariosComponent }, //Form de creacion
-      { path: 'mostrarPublicaciones', component: MostrarPublicacionesComponent },
-      { path: 'mostrarReportes', component: MostrarReportesComponent },
-      { path: 'nuevoAdmin', component: NuevoAdminComponent }
+      { path: 'home', component: AdminHomeComponent }, //Listar a todos los usuarios del sistema
+      { path: 'mostrarSolicitudesUsuarios', component: MostrarUsuariosComponent }, //Listar solicitudes de nuevos "Users"
+      { path: 'mostrarSolicitudesPublicaciones', component: MostrarPublicacionesComponent }, //***
+      { path: 'mostrarReportesPublicaciones', component: MostrarReportesComponent }, //***
+      { path: 'nuevoAdmin', component: NuevoAdminComponent } //Form de creacion de nuevo "Admin"
     ],
   },
 
@@ -51,8 +51,8 @@ const routes: Routes = [
     path: 'userMenu',
     component: UserViewComponent,
     children: [
-      { path: 'home', component: UserHomeComponent }, //Archivos y Carpetas en raiz
-      //{ path: 'crearPublicacion', component: CrearPublicacionComponent } //Form de creacion
+      { path: 'home', component: UserHomeComponent }, //Mostrar "Qué pr. quieres comprar?" (Seleccionar un Tag y segun esto mostrar publicaciones
+      //{ path: 'nuevaPublicacion', component: CrearPublicacionComponent } //Form de creacion
     ],
   },
 ];
