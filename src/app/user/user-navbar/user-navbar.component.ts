@@ -14,6 +14,11 @@ export class UserNavbarComponent {
     private cookieService: CookieService
     ) {}
 
+   /*  //Metodo que redirije a otro Componente
+    public redireccionar(route: string) {
+      this.router.navigate([route]);
+    } */
+
     //metodo
   public logout() {
     this.cookieService.delete('usuario');

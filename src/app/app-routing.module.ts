@@ -7,13 +7,25 @@ import { SignupComponent } from './auth/signup/signup.component';
 
 import { AdminViewComponent } from './admin/admin-view/admin-view.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
-import { MostrarUsuariosComponent } from './admin/mostrar-usuarios/mostrar-usuarios.component';
-import { MostrarPublicacionesComponent } from './admin/mostrar-publicaciones/mostrar-publicaciones.component';
-import { MostrarReportesComponent } from './admin/mostrar-reportes/mostrar-reportes.component';
+
+import { MostrarSolicitudesUsuariosComponent as VerSolicitudesUsuariosComponent } from './admin/mostrar-usuarios/mostrar-usuarios.component';
+import { MostrarPublicacionesComponent as VerSolicitudesPublicacionesComponent } from './admin/mostrar-publicaciones/mostrar-publicaciones.component';
+import { MostrarReportesComponent as VerReportesPublicacionesComponent } from './admin/mostrar-reportes/mostrar-reportes.component';
 import { NuevoAdminComponent } from './admin/nuevo-admin/nuevo-admin.component';
 
 import { UserViewComponent } from './user/user-view/user-view.component';
 import { UserHomeComponent } from './user/user-home/user-home.component';
+
+import { NuevoProductoComponent } from './user/nuevo-producto/nuevo-producto.component';
+import { MisProductosComponent } from './user/mis-productos/mis-productos.component';
+import { VerPublicacionesComponent } from './user/ver-publicaciones/ver-publicaciones.component';
+import { MisVentasComponent } from './user/mis-ventas/mis-ventas.component';
+
+import { NuevaPublicacionComponent } from './user/nueva-publicacion/nueva-publicacion.component';
+import { MisPublicacionesComponent } from './user/mis-publicaciones/mis-publicaciones.component';
+import { VerProductosComponent } from './user/ver-productos/ver-productos.component';
+import { MisComprasComponent } from './user/mis-compras/mis-compras.component';
+import { MisCoinsComponent } from './user/mis-coins/mis-coins.component';
 
 //Declaracion de Componentes como Rutas
 const routes: Routes = [
@@ -39,9 +51,9 @@ const routes: Routes = [
     component: AdminViewComponent,
     children: [
       { path: 'home', component: AdminHomeComponent }, //Listar a todos los usuarios del sistema
-      { path: 'mostrarSolicitudesUsuarios', component: MostrarUsuariosComponent }, //Listar solicitudes de nuevos "Users"
-      { path: 'mostrarSolicitudesPublicaciones', component: MostrarPublicacionesComponent }, //***
-      { path: 'mostrarReportesPublicaciones', component: MostrarReportesComponent }, //***
+      { path: 'verSolicitudesUsuarios', component: VerSolicitudesUsuariosComponent }, //Listar solicitudes de nuevos "Users"
+      { path: 'verSolicitudesPublicaciones', component: VerSolicitudesPublicacionesComponent }, //***
+      { path: 'verReportesPublicaciones', component: VerReportesPublicacionesComponent }, //***
       { path: 'nuevoAdmin', component: NuevoAdminComponent } //Form de creacion de nuevo "Admin"
     ],
   },
@@ -52,7 +64,17 @@ const routes: Routes = [
     component: UserViewComponent,
     children: [
       { path: 'home', component: UserHomeComponent }, //Mostrar "Qué pr. quieres comprar?" (Seleccionar un Tag y segun esto mostrar publicaciones
-      //{ path: 'nuevaPublicacion', component: CrearPublicacionComponent } //Form de creacion
+      { path: 'nuevoProducto', component: NuevoProductoComponent },
+      { path: 'misProductos', component: MisProductosComponent },
+      { path: 'verPublicaciones', component: VerPublicacionesComponent },
+      { path: 'misVentas', component: MisVentasComponent },
+
+      { path: 'nuevaPublicacion', component: NuevaPublicacionComponent },
+      { path: 'misPublicaciones', component: MisPublicacionesComponent },
+      { path: 'verProductos', component: VerProductosComponent },
+      { path: 'misCompras', component: MisComprasComponent },
+
+      { path: 'misCoins', component: MisCoinsComponent },
     ],
   },
 ];

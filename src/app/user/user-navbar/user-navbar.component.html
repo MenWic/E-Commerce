@@ -4,10 +4,30 @@
     </div>
 
     <div class="right-links">
-        <a [routerLink]="['publicaciones']">Publicaciones (V)</a>
-        <a [routerLink]="['productos']">Productos (C)</a>
-        <a [routerLink]="['monedas']">Monedas</a>
-        <a [routerLink]="['chat']">Chat</a>
-        <a> <button (click)="logout()" class="btn">Cerrar Sesion</button> </a>
+
+        <button mat-button [matMenuTriggerFor]="productos">Venta/Productos</button>        
+        <mat-menu #productos="matMenu">
+            <a mat-menu-item  [routerLink]="['nuevoProducto']">Nuevo producto</a>
+            <a mat-menu-item  [routerLink]="['misProductos']">Mis Productos</a>
+            <a mat-menu-item  [routerLink]="['verPublicaciones']">Ver publicaciones</a>
+            <a mat-menu-item  [routerLink]="['misVentas']">Ventas realizadas</a>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="publicaciones">Compras/Publicaciones</button>
+        <mat-menu #publicaciones="matMenu">
+            <a mat-menu-item  [routerLink]="['nuevaPublicacion']">Nueva publicacion</a>
+            <a mat-menu-item  [routerLink]="['misPublicaciones']">Mis publicaciones</a>
+            <a mat-menu-item  [routerLink]="['verProductos']">Ver productos</a>
+            <a mat-menu-item  [routerLink]="['misCompras']">Compras realizadas</a>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="billetera">Billetera</button>
+        <mat-menu #billetera="matMenu">
+
+            <a mat-menu-item  [routerLink]="['misCoins']">Mis Coins</a>
+        </mat-menu>
+
+        <button (click)="logout()" class="btn">Cerrar Sesion</button>
+
     </div>
 </div>

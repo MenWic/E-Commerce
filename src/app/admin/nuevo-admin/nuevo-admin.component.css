@@ -70,6 +70,10 @@ body {
   padding: 2% 10px 8% 10px;
 }
 
+.btn-select {
+
+}
+
 .btn:hover {
   opacity: 0.82;
 }

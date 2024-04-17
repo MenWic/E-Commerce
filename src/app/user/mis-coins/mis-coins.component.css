@@ -52,6 +52,11 @@ body {
 
 .form-box form .cells {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .form-box form .input input {
