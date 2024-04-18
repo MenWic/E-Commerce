@@ -1,6 +1,6 @@
 <div class="container">
     <div class="box form-box">
-        <header>Nuevo Producto</header>
+        <header>Nuevo Producto/Servicio</header>
 
         <form action="" method="post">
             <!-- <div class="field input">
@@ -20,16 +20,18 @@
                 <input type="number" name="price" id="price" autocomplete="off" placeholder="Q" required [(ngModel)]="precio">
             </div>
             <div class="field input">
-                <label for="status" name="status" id="status">Estado del producto</label>
+                <label for="status" name="status" id="status">Tipo o Estado</label>
                 <select name="status" id="status" required [(ngModel)]="estado">
-                    <option value="Nuevo">Nuevo</option>
-                    <option value="Seminuevo">Seminuevo</option>
-                    <option value="Usado">Usado</option>
+                    <option value="Nuevo">Nuevo (Producto)</option>
+                    <option value="Seminuevo">Seminuevo (Producto)</option>
+                    <option value="Usado">Usado (Producto)</option>
+                    <option value="Servicio">Servicio</option>
                 </select>
             </div>
             <div class="field input">
-                <label for="category">Categoría del producto</label>
+                <label for="category">Categoría</label>
                 <select name="category" id="category" required [(ngModel)]="categoria">
+                    <option value="Ninguno">Ninguno</option>
                     <option value="Electronica">Electrónica</option>
                     <option value="Celulares">Celulares</option>
                     <option value="Cocina">Cocina</option>

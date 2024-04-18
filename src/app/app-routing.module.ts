@@ -9,7 +9,7 @@ import { AdminViewComponent } from './admin/admin-view/admin-view.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 
 import { MostrarSolicitudesUsuariosComponent as VerSolicitudesUsuariosComponent } from './admin/mostrar-usuarios/mostrar-usuarios.component';
-import { MostrarPublicacionesComponent as VerSolicitudesPublicacionesComponent } from './admin/mostrar-publicaciones/mostrar-publicaciones.component';
+import { MostrarSolicitudesProductosComponent as VerSolicitudesProductosComponent } from './admin/mostrar-productos/mostrar-productos.component';
 import { MostrarReportesComponent as VerReportesPublicacionesComponent } from './admin/mostrar-reportes/mostrar-reportes.component';
 import { NuevoAdminComponent } from './admin/nuevo-admin/nuevo-admin.component';
 
@@ -18,7 +18,7 @@ import { UserHomeComponent } from './user/user-home/user-home.component';
 
 import { NuevoProductoComponent } from './user/nuevo-producto/nuevo-producto.component';
 import { MisProductosComponent } from './user/mis-productos/mis-productos.component';
-import { VerPublicacionesComponent } from './user/ver-publicaciones/ver-publicaciones.component';
+//import { VerPublicacionesComponent } from './user/ver-publicaciones/ver-publicaciones.component';
 import { MisVentasComponent } from './user/mis-ventas/mis-ventas.component';
 
 import { NuevaPublicacionComponent } from './user/nueva-publicacion/nueva-publicacion.component';
@@ -26,6 +26,7 @@ import { MisPublicacionesComponent } from './user/mis-publicaciones/mis-publicac
 import { VerProductosComponent } from './user/ver-productos/ver-productos.component';
 import { MisComprasComponent } from './user/mis-compras/mis-compras.component';
 import { MisCoinsComponent } from './user/mis-coins/mis-coins.component';
+import { UserHomeProductosComponent } from './user/user-home-productos/user-home-productos.component';
 
 //Declaracion de Componentes como Rutas
 const routes: Routes = [
@@ -52,7 +53,8 @@ const routes: Routes = [
     children: [
       { path: 'home', component: AdminHomeComponent }, //Listar a todos los usuarios del sistema
       { path: 'verSolicitudesUsuarios', component: VerSolicitudesUsuariosComponent }, //Listar solicitudes de nuevos "Users"
-      { path: 'verSolicitudesPublicaciones', component: VerSolicitudesPublicacionesComponent }, //***
+      { path: 'verSolicitudesProductos', component: VerSolicitudesProductosComponent },
+       //YA ESTAAAA
       { path: 'verReportesPublicaciones', component: VerReportesPublicacionesComponent }, //***
       { path: 'nuevoAdmin', component: NuevoAdminComponent } //Form de creacion de nuevo "Admin"
     ],
@@ -64,9 +66,10 @@ const routes: Routes = [
     component: UserViewComponent,
     children: [
       { path: 'home', component: UserHomeComponent }, //Mostrar "Qué pr. quieres comprar?" (Seleccionar un Tag y segun esto mostrar publicaciones
+      { path: 'homeProductos', component: UserHomeProductosComponent }, //Mostrar "Qué pr. quieres comprar?" (Seleccionar un Tag y segun esto mostrar publicaciones
+      //{ path: 'homeVoluntariados', component: UserHomeProductosComponent }, //Mostrar "Qué pr. quieres comprar?" (Seleccionar un Tag y segun esto mostrar publicaciones
       { path: 'nuevoProducto', component: NuevoProductoComponent },
       { path: 'misProductos', component: MisProductosComponent },
-      { path: 'verPublicaciones', component: VerPublicacionesComponent },
       { path: 'misVentas', component: MisVentasComponent },
 
       { path: 'nuevaPublicacion', component: NuevaPublicacionComponent },

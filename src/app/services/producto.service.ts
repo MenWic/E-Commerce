@@ -33,10 +33,20 @@ export class ProductoService {
     return this.http.post(`${this.url}/eliminarProducto`, body);
   }
 
+  public comprarProducto(productoId: any, usuarioId: any): Observable<any> {
+    let body = {id: productoId, UsuarioId: usuarioId}; //Creacion del json a enviar
+    return this.http.post(`${this.url}/comprarProducto`, body);
+  }
+
   //Reportar Producto (Usuario)
   public reportarProducto(id: any): Observable<any> {
     let body = {id: id} //PEND DE PROBAR AUN
     return this.http.post(`${this.url}/reportarProducto`, body );
+  }
+
+  //Muro de Prodcutos que el usuario puede comprar
+  public obtenerMuroProductosDeUsuario(id: any): Observable<any> {
+    return this.http.post(`${this.url}/productosExceptoDeUsuario`, { id });
   }
 
 }

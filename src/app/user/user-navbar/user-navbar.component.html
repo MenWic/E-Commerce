@@ -5,20 +5,26 @@
 
     <div class="right-links">
 
-        <button mat-button [matMenuTriggerFor]="productos">Venta/Productos</button>        
-        <mat-menu #productos="matMenu">
-            <a mat-menu-item  [routerLink]="['nuevoProducto']">Nuevo producto</a>
-            <a mat-menu-item  [routerLink]="['misProductos']">Mis Productos</a>
-            <a mat-menu-item  [routerLink]="['verPublicaciones']">Ver publicaciones</a>
-            <a mat-menu-item  [routerLink]="['misVentas']">Ventas realizadas</a>
+        <button mat-button [matMenuTriggerFor]="home">Home</button>        
+        <mat-menu #home="matMenu">
+            <a mat-menu-item  [routerLink]="['homeProductos']">Productos/Servicios</a>
+            <a mat-menu-item  [routerLink]="['homeVoluntariados']">Voluntariados</a>
         </mat-menu>
 
-        <button mat-button [matMenuTriggerFor]="publicaciones">Compras/Publicaciones</button>
-        <mat-menu #publicaciones="matMenu">
-            <a mat-menu-item  [routerLink]="['nuevaPublicacion']">Nueva publicacion</a>
-            <a mat-menu-item  [routerLink]="['misPublicaciones']">Mis publicaciones</a>
-            <a mat-menu-item  [routerLink]="['verProductos']">Ver productos</a>
+        <button mat-button [matMenuTriggerFor]="productos">Productos/Servicios</button>        
+        <mat-menu #productos="matMenu">
+            <a mat-menu-item  [routerLink]="['nuevoProducto']">Nuevo producto/servicio</a>
+            <a mat-menu-item  [routerLink]="['misProductos']">Mis Productos/servicios</a>
+            <a mat-menu-item  [routerLink]="['misVentas']">Ventas realizadas</a>
             <a mat-menu-item  [routerLink]="['misCompras']">Compras realizadas</a>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="publicaciones">Voluntariados</button>
+        <mat-menu #publicaciones="matMenu">
+            <a mat-menu-item  [routerLink]="['nuevoVoluntariado']">Nueva publicacion</a>
+            <a mat-menu-item  [routerLink]="['misVoluntariados']">Mis Voluntariados</a>
+            <a mat-menu-item  [routerLink]="['misVoluntariadosCompletados']">Voluntariados completados</a>
+            <a mat-menu-item  [routerLink]="['misParticipaciones']">Participaciones</a>
         </mat-menu>
 
         <button mat-button [matMenuTriggerFor]="billetera">Billetera</button>

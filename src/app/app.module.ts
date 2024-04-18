@@ -11,7 +11,6 @@ import { MatMenuModule } from "@angular/material/menu"; //Angular Material
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from '@angular/material/icon';
 
-
 import { CookieService } from 'ngx-cookie-service'; //Cookie de usuarios
 
 // Autenticacion
@@ -23,7 +22,8 @@ import { AdminViewComponent } from './admin/admin-view/admin-view.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
 import { MostrarSolicitudesUsuariosComponent } from './admin/mostrar-usuarios/mostrar-usuarios.component';
-import { MostrarPublicacionesComponent } from './admin/mostrar-publicaciones/mostrar-publicaciones.component';
+import { MostrarSolicitudesProductosComponent } from './admin/mostrar-productos/mostrar-productos.component';
+
 import { MostrarReportesComponent } from './admin/mostrar-reportes/mostrar-reportes.component';
 import { NuevoAdminComponent } from './admin/nuevo-admin/nuevo-admin.component';
 
@@ -45,6 +45,8 @@ import { CardProductoComponent } from './utilities/card-producto/card-producto.c
 import { CardPublicacionComponent } from './utilities/card-publicacion/card-publicacion.component';
 import { CardProductoMuroComponent } from './utilities/card-producto-muro/card-producto-muro.component';
 import { CardProductoReportadoComponent } from './utilities/card-producto-reportado/card-producto-reportado.component';
+import { UserHomeProductosComponent } from './user/user-home-productos/user-home-productos.component';
+//import { MostrarProductosComponent } from './admin/mostrar-productos/mostrar-productos.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,7 @@ import { CardProductoReportadoComponent } from './utilities/card-producto-report
     AdminHomeComponent,
     AdminNavbarComponent,
     MostrarSolicitudesUsuariosComponent,
-    MostrarPublicacionesComponent,
+    MostrarSolicitudesProductosComponent, //this
     MostrarReportesComponent,
     NuevoAdminComponent,
 
@@ -76,6 +78,9 @@ import { CardProductoReportadoComponent } from './utilities/card-producto-report
     CardPublicacionComponent,
     CardProductoMuroComponent,
     CardProductoReportadoComponent,
+    UserHomeProductosComponent,
+    
+    //MostrarProductosComponent,
   ],
   imports: [
     BrowserModule,

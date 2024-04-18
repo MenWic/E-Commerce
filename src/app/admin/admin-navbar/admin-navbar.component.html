@@ -4,10 +4,20 @@
     </div>
 
     <div class="right-links">
-        <a [routerLink]="['verSolicitudesUsuarios']">Usuarios</a>
-        <a [routerLink]="['verSolicitudesPublicaciones']">Publicaciones</a>
-        <a [routerLink]="['verReportesPublicaciones']">Reportes</a>
-        <a [routerLink]="['nuevoAdmin']">Nuevo Admin</a>
-        <a> <button (click)="logout()" class="btn">Cerrar Sesion</button> </a>
+
+        <button mat-button [routerLink]="['home']">Usuarios</button>        
+
+        <button mat-button [matMenuTriggerFor]="publicaciones">Solicitudes</button>
+        <mat-menu #publicaciones="matMenu">
+            <a mat-menu-item  [routerLink]="['verSolicitudesUsuarios']">Nuevos Usuarios</a>
+            <a mat-menu-item  [routerLink]="['verSolicitudesProductos']">Nuevos Productos</a>
+        </mat-menu>
+
+        <button mat-button [routerLink]="['verReportesPublicaciones']">Reportes</button>        
+
+        <button mat-button [routerLink]="['nuevoAdmin']">Nuevo Admin</button>
+        
+        <button (click)="logout()" class="btn">Cerrar Sesion</button>
+
     </div>
 </div>

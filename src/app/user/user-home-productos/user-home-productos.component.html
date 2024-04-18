@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="box form-box">
+      <header>Home Productos/Servicios</header>
+      
+      <form>
+        <div class="center-cards">
+          <app-card-producto-muro *ngFor="let prod of productos" [producto]="prod" (actualizar)="mostrarMuroProductos()"></app-card-producto-muro>
+        </div>
+      </form>
+    </div>
+  </div>

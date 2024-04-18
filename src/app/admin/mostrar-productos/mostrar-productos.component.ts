@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
-  selector: 'app-mostrar-publicaciones',
-  templateUrl: './mostrar-publicaciones.component.html',
-  styleUrls: ['./mostrar-publicaciones.component.css']
+  selector: 'app-mostrar-productos',
+  templateUrl: './mostrar-productos.component.html',
+  styleUrls: ['./mostrar-productos.component.css']
 })
-export class MostrarPublicacionesComponent {
-
+export class MostrarSolicitudesProductosComponent {
   public productos!: any[];
 
   //Contructor

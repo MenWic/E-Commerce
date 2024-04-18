@@ -14,12 +14,14 @@
         <div class="content">
             <span class="title">{{ producto.titulo }}</span>
             <span class="user">Vendedor: {{ producto.UserId }}</span>
-            <p class="message">Descripcion: {{ producto.descripcion }}</p>
+            <p class="message">{{ producto.descripcion }}</p>
             <p class="price">Precio: Q{{ producto.precio }}</p>
-            <p class="status">Estado: {{ producto.estado }}</p>
+            <p class="status">Tipo: {{ producto.estado }}</p>
             <p class="category">Categoría: {{ producto.categoria }}</p>
         </div>
         <div class="actions">
+            <!--  (click)="comprarProducto(producto.id) -->
+            
             <button type="button" class="history">Comprar</button>
             <button type="button" class="track">Mensaje</button>
         </div>

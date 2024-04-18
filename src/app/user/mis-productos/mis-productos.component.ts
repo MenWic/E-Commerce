@@ -22,7 +22,7 @@ export class MisProductosComponent {
     this.mostrarProductosDeUsuario();
   }
 
-  //Servicio para obtener productos del Usuario
+  //Servicio para obtener muro de productos para el Usuario
   mostrarProductosDeUsuario(): void {
     let id = this.cookieService.get('id');
 
