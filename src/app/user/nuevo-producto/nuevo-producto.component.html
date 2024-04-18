@@ -3,36 +3,43 @@
         <header>Nuevo Producto</header>
 
         <form action="" method="post">
-            <div class="field input">
+            <!-- <div class="field input">
                 <label for="image">Imagen</label>
                 <button type="search" class="btn-select" name="image">Seleccionar</button>
-            </div>
+            </div> -->
             <div class="field input">
                 <label for="title">Título</label>
-                <input type="text" name="title" id="title" autocomplete="off" required>
+                <input type="text" name="title" id="title" autocomplete="off" required [(ngModel)]="titulo">
             </div>
             <div class="field input">
                 <label for="descrip">Descripción</label>
-                <input type="descrip" name="descrip" id="descrip" autocomplete="off" required>
+                <textarea name="descrip" id="descrip" autocomplete="off" required [(ngModel)]="descripcion"></textarea>
             </div>
             <div class="field input">
-                <label for="quantity">Cantidad / Stock</label>
-                <input type="number" name="quantity" id="quantity" autocomplete="off" required>
+                <label for="price">Precio</label>
+                <input type="number" name="price" id="price" autocomplete="off" placeholder="Q" required [(ngModel)]="precio">
             </div>
             <div class="field input">
-                <label for="price">Precio unitario (Q)</label>
-                <input type="number" name="price" id="price" autocomplete="off" placeholder="Q" required>
-            </div>
-            <div class="field input">
-                <label for="tag" name="tag" id="tag">Tag</label>
-                <select [(ngModel)]="estadoProducto">
+                <label for="status" name="status" id="status">Estado del producto</label>
+                <select name="status" id="status" required [(ngModel)]="estado">
                     <option value="nuevo">Nuevo</option>
                     <option value="seminuevo">Seminuevo</option>
                     <option value="usado">Usado</option>
                 </select>
             </div>
+            <div class="field input">
+                <label for="category">Categoría del producto</label>
+                <select name="category" id="category" required [(ngModel)]="categoria">
+                    <option value="Electronica">Electrónica</option>
+                    <option value="Celulares">Celulares</option>
+                    <option value="Cocina">Cocina</option>
+                    <option value="Televisores">Televisores</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Calzado">Calzado</option>
+                </select>
+            </div>
             <div class="field">
-                <input type="submit" class="btn" name="submit" value="Crear Producto">
+                <input (click)="crearProducto()" type="submit" class="btn" name="submit" value="Crear Producto">
             </div>
         </form>
     </div>

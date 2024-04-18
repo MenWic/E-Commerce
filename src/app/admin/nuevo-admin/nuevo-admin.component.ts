@@ -37,7 +37,6 @@ export class NuevoAdminComponent {
         alert('No se creo el Admin');
         return;
       }
-      
       alert('Se creo el Admin');
       //this.router.navigate(['/adminMenu/home']);
       this.redireccionarService.redireccionar('home');

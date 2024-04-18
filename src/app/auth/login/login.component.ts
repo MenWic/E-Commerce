@@ -41,6 +41,7 @@ export class LoginComponent {
 
       this.cookieService.set('usuario', respuesta.usuarioEncontrado.email);
       this.cookieService.set('rol', respuesta.usuarioEncontrado.rol);
+      this.cookieService.set('id', respuesta.usuarioEncontrado.id);
       //this.cookieService.set('aprobado', respuesta.aprobado);
 
       //console.log(usuario); //Imprimir el obj usuario/respuesta

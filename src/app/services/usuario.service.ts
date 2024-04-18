@@ -24,23 +24,24 @@ export class UsuarioService {
     return this.http.post(`${this.url}/crearUsuario`, usuario);
   }
 
-  //Usuarios aprobados (Admin)
+  //Todos los Usuarios del sistema aprobados (Admin)
   public obtenerUsuariosAprobados(): Observable<any> {
     return this.http.get(`${this.url}/usuariosAprobados`)
     .pipe(map((response: any) => response.usuariosAprobados));
   }
 
+  //Eliminar un Usuario (Admin)
   public eliminarUsuario(id: number): Observable<any> {
     return this.http.post(`${this.url}/eliminarUsuario`, {id} );
   }
 
-  //Usuarios por aprobar (Admin)
+  //Solicitudes de Usuarios por aprobar (Admin)
   public obtenerUsuariosDesaprobados(/*usuario: any*/): Observable<any> {
     return this.http.get(`${this.url}/usuariosDesaprobados`)
     .pipe(map((response: any) => response.usuariosDesaprobados));
   }
 
-  //AQUI ESTA EL ERROR EN LA 35
+  //Aprobar Usuarios (Admin)
   public aprobarUsuario(id: number): Observable<any> {
     return this.http.post(`${this.url}/aprobarUsuario`, {id} );
   }
