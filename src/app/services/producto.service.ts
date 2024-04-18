@@ -11,12 +11,10 @@ export class ProductoService {
   constructor(private http: HttpClient) { }
 
   //Peticiones
-  //Creacion de Producto (Vendedor)
+  //Creacion de Producto (Usuario)
   public crearProducto(producto: any): Observable<any> {
     return this.http.post(`${this.url}/crearProducto`, producto);
   }
-
-  //--- PEND ---
   
   //Produtos por aprobar (Admin)
   public obtenerProductosDesaprobados(/*usuario: any*/): Observable<any> {
@@ -26,6 +24,20 @@ export class ProductoService {
 
   //Aprobar Producto (Admin)
   public aprobarProducto(id: number): Observable<any> {
-    return this.http.post(`${this.url}/aprobarProducto`, {id} );
+    return this.http.post(`${this.url}/aprobarProducto`, { id } );
   }
+
+  //Eliminar Porducto (Usuario)
+  public eliminarProducto(productoId: any): Observable<any> {
+    let body = {UsuarioId: productoId}; //Creacion del json a enviar
+    return this.http.post(`${this.url}/eliminarProducto`, body);
+  }
+
+  //Reportar Producto (Usuario)
+  public reportarProducto(id: any): Observable<any> {
+    let body = {id: id} //PEND DE PROBAR AUN
+    return this.http.post(`${this.url}/reportarProducto`, body );
+  }
+
 }
+

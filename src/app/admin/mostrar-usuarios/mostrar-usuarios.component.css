@@ -32,6 +32,9 @@ body {
 .form-box {
   width: 650px;
   margin: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
 }
 
 .form-box header {
@@ -67,6 +70,17 @@ body {
 .btn {
   height: 35px;
   background: lightgreen;
+  border-radius: 16px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 2% 5% 3% 5%;
+}
+
+.btn-e {
+  height: 35px;
+  background: lightcoral;
   border-radius: 16px;
   color: #fff;
   font-size: 15px;

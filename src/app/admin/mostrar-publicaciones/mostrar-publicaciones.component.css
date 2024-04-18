@@ -32,6 +32,9 @@ body {
 .form-box {
   width: 650px;
   margin: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
 }
 
 .form-box header {

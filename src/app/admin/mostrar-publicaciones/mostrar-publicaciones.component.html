@@ -1,28 +1,35 @@
 <div class="container">
     <div class="box form-box">
-      <header>Solicitud de Publicaciones</header>
+      <header>Solicitud de Publicación de Productos</header>
   
       <form action="">
   
         <table class="cells">
           <thead>
             <tr>
-              <th>ID</th>
-              <th> User</th>
+              <th> ID </th>
+              <th> Titulo</th>
               <th> Descripción</th>
-              <th> Accion</th>
+              <th> Precio</th>
+              <th> Estado</th>
+              <th> Catgoría</th>
+              <th> Username</th>
+              <th> Acción</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td> 04 </td>
-              <td> Jose</td>
-              <td> Necesito un Celular Xiaomi en buenas condiciones (para uso diario) y... </td>
+            <tr *ngFor="let producto of productos">
+              <td>{{ producto.id }}</td>
+              <td>{{ producto.titulo }}</td>
+              <td>{{ producto.descripcion }}</td>
+              <td>{{ producto.precio }}</td>
+              <td>{{ producto.estado }}</td>
+              <td>{{ producto.categoria }}</td>
+              <td>{{ producto.UsuarioId }}</td>
               <td>
-                <button class="btn" >Aprobar</button>
-                <button class="btn-e" >Eliminar</button>
-            </td>
-              <!-- !(click)="aceptarUsuario(usuario.id)"-->
+                <button class="btn" (click)="aceptarProducto(producto.id)">Aprobar</button>
+                <button class="btn-e" (click)="rechazarProducto(producto.id)">Rechazar</button>
+              </td>
             </tr>
           </tbody>
         </table>

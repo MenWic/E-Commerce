@@ -41,6 +41,10 @@ import { MisPublicacionesComponent } from './user/mis-publicaciones/mis-publicac
 import { VerProductosComponent } from './user/ver-productos/ver-productos.component';
 import { MisComprasComponent } from './user/mis-compras/mis-compras.component';
 import { MisCoinsComponent } from './user/mis-coins/mis-coins.component';
+import { CardProductoComponent } from './utilities/card-producto/card-producto.component';
+import { CardPublicacionComponent } from './utilities/card-publicacion/card-publicacion.component';
+import { CardProductoMuroComponent } from './utilities/card-producto-muro/card-producto-muro.component';
+import { CardProductoReportadoComponent } from './utilities/card-producto-reportado/card-producto-reportado.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +72,10 @@ import { MisCoinsComponent } from './user/mis-coins/mis-coins.component';
     VerProductosComponent,
     MisComprasComponent,
     MisCoinsComponent,
+    CardProductoComponent,
+    CardPublicacionComponent,
+    CardProductoMuroComponent,
+    CardProductoReportadoComponent,
   ],
   imports: [
     BrowserModule,

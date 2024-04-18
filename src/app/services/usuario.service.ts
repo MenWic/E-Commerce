@@ -2,15 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsuarioService {
   private url: string = 'http://localhost:3000/usuario'; //Ruta a la que se envian las peticiones HTTP (API-BackEnd)
 
   //Constructor
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   //Peticiones
   //Login
@@ -26,27 +25,35 @@ export class UsuarioService {
 
   //Todos los Usuarios del sistema aprobados (Admin)
   public obtenerUsuariosAprobados(): Observable<any> {
-    return this.http.get(`${this.url}/usuariosAprobados`)
-    .pipe(map((response: any) => response.usuariosAprobados));
-  }
-
-  //Eliminar un Usuario (Admin)
-  public eliminarUsuario(id: number): Observable<any> {
-    return this.http.post(`${this.url}/eliminarUsuario`, {id} );
-  }
-
-  //Solicitudes de Usuarios por aprobar (Admin)
-  public obtenerUsuariosDesaprobados(/*usuario: any*/): Observable<any> {
-    return this.http.get(`${this.url}/usuariosDesaprobados`)
-    .pipe(map((response: any) => response.usuariosDesaprobados));
+    return this.http
+      .get(`${this.url}/usuariosAprobados`)
+      .pipe(map((response: any) => response.usuariosAprobados));
   }
 
   //Aprobar Usuarios (Admin)
   public aprobarUsuario(id: number): Observable<any> {
-    return this.http.post(`${this.url}/aprobarUsuario`, {id} );
+    return this.http.post(`${this.url}/aprobarUsuario`, { id });
+  }
+
+  //Eliminar un Usuario (Admin)
+  public eliminarUsuario(id: number): Observable<any> {
+    return this.http.post(`${this.url}/eliminarUsuario`, { id });
+  }
+
+  //Solicitudes de Usuarios por aprobar (Admin)
+  public obtenerUsuariosDesaprobados(/*usuario: any*/): Observable<any> {
+    return this.http
+      .get(`${this.url}/usuariosDesaprobados`)
+      .pipe(map((response: any) => response.usuariosDesaprobados));
+  }
+
+  //Produtctos del usuario loggeado
+  public obtenerProductosDeUsuario(id: any): Observable<any> {
+    return this.http.post(`${this.url}/productosPorUsuario`, { id });
   }
 
   //**************************************** */
+
   public editarUsuario(usuario: any): Observable<any> {
     return this.http.post(`${this.url}/editarUsuario`, usuario);
   }

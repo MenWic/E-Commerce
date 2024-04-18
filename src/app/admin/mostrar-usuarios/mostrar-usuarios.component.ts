@@ -36,4 +36,14 @@ export class MostrarSolicitudesUsuariosComponent implements OnInit {
       this.mostrarUsuariosDesaprobados();
     });
   }
+  
+  //Metodo que rechaza/elimina al usuario aspirante
+  rechazarUsuario(id: number): void {
+    this.usuarioService.eliminarUsuario(id).subscribe(() => {
+      console.log('Usuario (ID) enviado a Node: ', id)
+
+      // Actualizar la lista de usuarios desaprobados después de rechazar uno
+      this.mostrarUsuariosDesaprobados();
+    });
+  }
 }

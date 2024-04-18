@@ -1,114 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);
 
-.tablero{
-    padding: 5px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    padding-right: 20px;
-}
-
-.ruta{
-    font-family: "Poppins", sans-serif;
-    padding-top: 50px;
-    padding-left: 100px;
-    font-size: 20px;
-    font-weight: 700;
-    color: rgba(76, 68, 182, 0.808);
-}
-.button-bar{
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    flex-direction: row-reverse;
-    padding-right: 20px;
-}
-
-.boton-archivo {
-    padding: 1em 2em;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: green;
-    transition: all 1000ms;
-    font-size: 15px;
-    position: relative;
-    overflow: hidden;
-    outline: 2px solid green;
-}
-
-.boton-archivo:hover {
-    color: #ffffff;
-    transform: scale(1.1);
-    outline: 2px solid green;
-    box-shadow: 4px 5px 17px -4px green;
-}
-
-.boton-archivo::before {
-    content: "";
-    position: absolute;
-    left: -50px;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background-color: green;
-    transform: skewX(45deg);
-    z-index: -1;
-    transition: width 1000ms;
-}
-
-.boton-archivo:hover::before {
-    width: 250%;
-}
-
-
-.boton-carpeta {
-    padding: 1em 2em;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #2c9caf;
-    transition: all 1000ms;
-    font-size: 15px;
-    position: relative;
-    overflow: hidden;
-    outline: 2px solid #2c9caf;
-}
-
-.boton-carpeta:hover {
-    color: #ffffff;
-    transform: scale(1.1);
-    outline: 2px solid #70bdca;
-    box-shadow: 4px 5px 17px -4px #268391;
-}
-
-.boton-carpeta::before {
-    content: "";
-    position: absolute;
-    left: -50px;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background-color: #2c9caf;
-    transform: skewX(45deg);
-    z-index: -1;
-    transition: width 1000ms;
-}
-
-.boton-carpeta:hover::before {
-    width: 250%;
-}
-
-/*-------------*/
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);
-
 * {
   padding: 0;
   margin: 0;
@@ -140,6 +31,9 @@ body {
 
 .form-box {
   width: 650px;
+  margin: 10px 10px;
+  justify-content: center;
+  align-items: center;
   margin: 10px 10px;
 }
 
@@ -174,6 +68,17 @@ body {
 }
 
 .btn {
+  height: 35px;
+  background: lightcoral;
+  border-radius: 16px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 2% 5% 3% 5%;
+}
+
+.btn-e {
   height: 35px;
   background: lightcoral;
   border-radius: 16px;
