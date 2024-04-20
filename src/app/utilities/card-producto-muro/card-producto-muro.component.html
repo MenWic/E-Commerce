@@ -13,7 +13,7 @@
         </div>
         <div class="content">
             <span class="title">{{ producto.titulo }}</span>
-            <span class="user">Vendedor: {{ producto.UserId }}</span>
+            <span class="user">Vendedor: {{ producto.UsuarioId }}</span>
             <p class="message">{{ producto.descripcion }}</p>
             <p class="price">Precio: Q{{ producto.precio }}</p>
             <p class="status">Tipo: {{ producto.estado }}</p>
@@ -22,7 +22,7 @@
         <div class="actions">
             <!--  (click)="comprarProducto(producto.id) -->
             
-            <button type="button" class="history">Comprar</button>
+            <button (click)="comprarProducto()" type="button" class="history">Comprar</button>
             <button type="button" class="track">Mensaje</button>
         </div>
     </div>

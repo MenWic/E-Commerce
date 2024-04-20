@@ -33,6 +33,7 @@ export class ProductoService {
     return this.http.post(`${this.url}/eliminarProducto`, body);
   }
 
+  //Comprar Producto
   public comprarProducto(productoId: any, usuarioId: any): Observable<any> {
     let body = {id: productoId, UsuarioId: usuarioId}; //Creacion del json a enviar
     return this.http.post(`${this.url}/comprarProducto`, body);

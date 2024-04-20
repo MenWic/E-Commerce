@@ -21,6 +21,8 @@ export class CardProductoMuroComponent {
   //Metodo para comprar producto
   comprarProducto(): void {
     this.productoService.comprarProducto(this.producto.id, this.cookieService.get('id')).subscribe(() => {
+      console.log(this.producto.UsuarioId)
+      alert('Se compro el Producto');
       //console.log('Producto (ID) enviado a Node: ', producto.id);
 
       // Actualizar la lista de usuarios desaprobados después de aceptar uno
